@@ -4,12 +4,20 @@ from django.db import models
 from django.db.models.fields import NOT_PROVIDED
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.translation import get_language, ugettext_lazy as _
+from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import get_language as django_get_language
 from collections import OrderedDict
 
 
 LANGUAGE_CODE = 0
 LANGUAGE_NAME = 1
+
+
+def get_language():
+    language = django_get_language()
+    if not language:
+        language = settings.LANGUAGE_CODE
+    return language
 
 
 def get_languages():
