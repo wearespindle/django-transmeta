@@ -38,7 +38,7 @@ long_description = (
 
 setup(
     name="django-transmeta-jl",
-    version="0.7.4",
+    version="0.7.5",
     author='Jaroslaw Lachowski',
     author_email='jalachowski@gmail.com',
     description="Transmeta is an application for translatable content in Django's models.",
