@@ -178,5 +178,5 @@ class LazyString(object):
         self.proxy = proxy
         self.lang = lang
 
-    def __unicode__(self):
-        return u'%s (%s)' % (self.proxy, self.lang)
+    def __str__(self):
+        return '%s (%s)' % (self.proxy, self.lang)
